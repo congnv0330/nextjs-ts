@@ -45,6 +45,9 @@ module.exports = {
     'no-useless-constructor': 'off',
     '@typescript-eslint/no-useless-constructor': 'warn',
 
+    // React hooks
+    'react-hooks/exhaustive-deps': 'warn',
+
     // simple-import-sort
     'simple-import-sort/exports': 'warn',
     'simple-import-sort/imports': [
