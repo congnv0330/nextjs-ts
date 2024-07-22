@@ -3,6 +3,9 @@ module.exports = {
   extends: ['next/core-web-vitals', 'plugin:prettier/recommended'],
   plugins: ['simple-import-sort'],
   rules: {
+    // Import
+    'import/no-anonymous-default-export': 'off',
+
     // React hooks
     'react-hooks/exhaustive-deps': 'warn',
 
