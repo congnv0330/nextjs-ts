@@ -1,6 +1,10 @@
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
-  extends: ['next/core-web-vitals', 'plugin:prettier/recommended'],
+  extends: [
+    'plugin:@typescript-eslint/recommended',
+    'next/core-web-vitals',
+    'plugin:prettier/recommended',
+  ],
   plugins: ['simple-import-sort'],
   rules: {
     // Import
@@ -15,11 +19,8 @@ module.exports = {
       'warn',
       {
         groups: [
-          // Packages `react` related packages come first.
-          ['^react', '^@?\\w'],
-
-          // Packages `next` related packages come second.
-          ['^next', '^@?\\w'],
+          // Packages `react`, `next`, related packages come first.
+          ['^react', '^next', '^@?\\w'],
 
           // Internal packages.
           ['^(@|components)(/.*|$)'],
