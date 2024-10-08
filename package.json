@@ -14,19 +14,18 @@
     "lint:fix": "next lint --fix"
   },
   "dependencies": {
-    "next": "^14.2.11",
+    "next": "^14.2.14",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "^14.2.11",
-    "@types/node": "^20.16.5",
-    "@types/react": "^18.3.6",
+    "@next/bundle-analyzer": "^14.2.14",
+    "@types/node": "^20.16.11",
+    "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.0",
-    "@typescript-eslint/eslint-plugin": "^7.18.0",
     "cross-env": "^7.0.3",
     "eslint": "^8.57.1",
-    "eslint-config-next": "^14.2.11",
+    "eslint-config-next": "^14.2.14",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-simple-import-sort": "^12.1.1",

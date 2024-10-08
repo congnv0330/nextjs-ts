@@ -1,7 +1,6 @@
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
   extends: [
-    'plugin:@typescript-eslint/recommended',
     'next/core-web-vitals',
     'next/typescript',
     'plugin:prettier/recommended',
