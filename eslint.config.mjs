@@ -1,42 +1,20 @@
-import { FlatCompat } from '@eslint/eslintrc';
+import { defineConfig } from 'eslint/config';
+import nextVitals from 'eslint-config-next/core-web-vitals';
+import nextTs from 'eslint-config-next/typescript';
+import eslintPrettier from 'eslint-plugin-prettier/recommended';
 import simpleImportSortPlugin from 'eslint-plugin-simple-import-sort';
-import { dirname } from 'node:path';
-import { fileURLToPath } from 'node:url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
-
-/** @type {import('eslint').Linter.Config[]} */
-export default [
-  {
-    ignores: [
-      'node_modules/**',
-      '.next/**',
-      'out/**',
-      'build/**',
-      'next-env.d.ts',
-    ],
-  },
-  ...compat.extends(
-    'next/core-web-vitals',
-    'next/typescript',
-    'plugin:prettier/recommended',
-  ),
+const eslintConfig = defineConfig([
+  ...nextVitals,
+  ...nextTs,
+  eslintPrettier,
   {
     plugins: {
       'simple-import-sort': simpleImportSortPlugin,
     },
 
     rules: {
-      // Import
       'import/no-anonymous-default-export': 'off',
-
-      // React hooks
-      'react-hooks/exhaustive-deps': 'warn',
 
       // simple-import-sort
       'simple-import-sort/exports': 'warn',
@@ -66,4 +44,6 @@ export default [
       ],
     },
   },
-];
+]);
+
+export default eslintConfig;
